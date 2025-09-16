@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last Friday Party - Kenya's Hottest House Parties | Book Tickets Now</title>
+  <meta name="description" content="Experience Kenya's most electrifying house parties. Limited tickets available for our Neon Jungle, Haunted Bass, and Glow Carnival events. Book now!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --neon-pink: #ff00ff;
+      --neon-blue: #00ffff;
+      --neon-green: #00ff99;
+      --neon-yellow: #ffff00;
+      --dark-bg: rgba(0, 0, 0, 0.75);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0,0,0,0.6);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ff00ff' fill-opacity='0.2' d='M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+      z-index: -1;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-blue);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    .urgency-bar {
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      color: #000;
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Navigation */
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .nav-btn {
+      padding: 0.8rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-btn:hover, .nav-btn.active {
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+      color: #000;
+    }
+    
+    /* Events Container */
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 1rem;
+    }
+    
+    /* Event Card Styles */
+    .event-card {
+      background: var(--dark-bg);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, var(--neon-pink), var(--neon-blue)) 1;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .event-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    .event-card.active {
+      animation: pulseGlow 2s infinite;
+    }
+    
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 15px var(--neon-pink); }
+      50% { box-shadow: 0 0 30px var(--neon-blue); }
+      100% { box-shadow: 0 0 15px var(--neon-pink); }
+    }
+    
+    .event-header {
+      position: relative;
+    }
+    
+    .event-header img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .event-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+      color: #000;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .event-content {
+      padding: 1.5rem;
+    }
+    
+    .event-content h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+    
+    .event-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+    
+    .event-meta svg {
+      margin-right: 8px;
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    
+    .event-details {
+      max-height: 0;
+      overflow: hidden;
+      background: rgba(255,255,255,0.05);
+      padding: 0 1.5rem;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+    
+    .event-card.active .event-details {
+      max-height: 1000px;
+      padding: 1.5rem;
+    }
+    
+    .event-details p {
+      margin: 0.8rem 0;
+      font-size: 0.95rem;
+    }
+    
+    /* CTA Buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .book-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+      border-radius: 50px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px var(--neon-pink);
+      transition: all 0.3s ease;
+      flex: 1;
+      text-align: center;
+      min-width: 160px;
+    }
+    
+    .book-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px var(--neon-pink);
+    }
+    
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      flex: 1;
+      min-width: 140px;
+    }
+    
+    .secondary-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+    
+    /* Social Proof */
+    .social-proof {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+    
+    .proof-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .proof-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .proof-icon {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      fill: var(--neon-pink);
+    }
+    
+    /* Countdown */
+    .countdown {
+      display: flex;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+    
+    .countdown-item {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 60px;
+      border: 1px solid var(--neon-blue);
+    }
+    
+    .countdown-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--neon-green);
+      text-shadow: 0 0 10px var(--neon-green);
+    }
+    
+    .countdown-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    
+    /* Interactive Elements */
+    .interactive-section {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+    
+    .interactive-section h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+    
+    .music-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .music-sample {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 150px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .music-sample:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+    
+    .music-sample i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--neon-blue);
+    }
+    
+    /* Guest List */
+    .guest-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .guest-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--neon-pink);
+      transition: all 0.3s ease;
+    }
+    
+    .guest-avatar:hover {
+      transform: scale(1.1);
+      border-color: var(--neon-blue);
+    }
+    
+    /* Gamification */
+    .gamification {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .points-card, .badge-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .points-number, .badge-icon {
+      font-size: 2.5rem;
+      color: var(--neon-yellow);
+      margin-bottom: 1rem;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      text-align: center;
+    }
+    
+    .testimonials h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .testimonial {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: left;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid var(--neon-pink);
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+    }
+    
+    .faq-section h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+    
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 1rem;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      margin-top: 3rem;
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    /* Mobile Sticky CTA */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+      padding: 1rem;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mobile-cta .book-btn {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .events-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+      }
+      
+      .mobile-cta {
+        display: block;
+      }
+      
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guest-list {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      }
+      
+      .guest-avatar {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Urgency Bar -->
+  <div class="urgency-bar">
+    🎉 LIMITED TICKETS AVAILABLE - BOOK NOW TO AVOID DISAPPOINTMENT! 🎉
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <h1>KENYA'S HOTTEST HOUSE PARTIES</h1>
+        <p>Intimate vibes, great music, and unforgettable experiences!</p>
+        <div class="countdown">
+          <div class="countdown-item">
+            <div class="countdown-number" id="days">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="seconds">00</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <button class="nav-btn active" data-filter="all">All Events</button>
+      <button class="nav-btn" data-filter="nairobi">Nairobi</button>
+      <button class="nav-btn" data-filter="mombasa">Mombasa</button>
+      <button class="nav-btn" data-filter="kisumu">Kisumu</button>
+      <button class="nav-btn" data-filter="upcoming">Upcoming</button>
+    </nav>
+
+    <!-- Events Container -->
+    <section class="events-container" id="events-list"></section>
+
+    <!-- Interactive Elements -->
+    <section class="interactive-section">
+      <h3>Experience the Vibe</h3>
+      
+      <div class="music-preview">
+        <div class="music-sample" data-genre="afrobeats">
+          <i class="fas fa-music"></i>
+          <p>Afrobeats</p>
+        </div>
+        <div class="music-sample" data-genre="house">
+          <i class="fas fa-music"></i>
+          <p>House</p>
+        </div>
+        <div class="music-sample" data-genre="reggae">
+          <i class="fas fa-music"></i>
+          <p>Reggae</p>
+        </div>
+        <div class="music-sample" data-genre="edm">
+          <i class="fas fa-music"></i>
+          <p>EDM</p>
+        </div>
+      </div>
+      
+      <h3>Who's Coming?</h3>
+      <div class="guest-list">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Guest" class="guest-avatar">
+        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Guest" class="guest-avatar">
+      </div>
+    </section>
+
+    <!-- Gamification -->
+    <section class="interactive-section">
+      <h3>Earn Rewards</h3>
+      <div class="gamification">
+        <div class="points-card">
+          <div class="points-number">250</div>
+          <p>Your Party Points</p>
+          <p>Earn 100 more points for a free drink!</p>
+        </div>
+        <div class="badge-card">
+          <div class="badge-icon">🏆</div>
+          <p>Party Regular Badge</p>
+          <p>Unlocked after 3 events</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h3>What Party People Say</h3>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Last Friday Party events are absolutely insane! The energy, the music, the people - everything is always perfect. I never miss an event!"
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah" class="testimonial-avatar">
+            <div>
+              <strong>Sarah K.</strong>
+              <div>Nairobi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I've been to parties all over the world, but nothing compares to the vibes at Last Friday Party. These guys know how to throw an event!"
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="testimonial-avatar">
+            <div>
+              <strong>Mike J.</strong>
+              <div>Mombasa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "The production value is incredible. From the lights to the sound system, everything is top-notch. Worth every shilling!"
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lucy" class="testimonial-avatar">
+            <div>
+              <strong>Lucy W.</strong>
+              <div>Kisumu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-item">
+        <div class="faq-question">
+          What should I wear to the party? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Dress to impress! Most of our parties have themes, so check the event details for specific dress code information. Comfortable shoes are recommended for dancing.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What's included in the ticket price? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Entry to the event, access to all areas, and sometimes complimentary drinks or food depending on the event. VIP tickets include additional perks like reserved seating and premium drinks.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Is there parking available? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Limited parking is available at most venues. We recommend using ride-sharing services or taxis for convenience and safety.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I get a refund if I can't attend? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Tickets are non-refundable but transferable. You can transfer your ticket to someone else by contacting us at least 24 hours before the event.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Follow Us for Updates</h3>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>© 2025 Last Friday Party. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-cta">
+    <a href="#book-now" class="book-btn">Book Tickets Now</a>
+  </div>
+
+  <script>
+    // Event Data
+    const events = [
+      { 
+        date: "Sept 27, 2025", 
+        title: "Neon Jungle", 
+        location: "Nairobi", 
+        desc: "Step into the wild with UV paint, EDM beats, and jungle vibes. Glow-in-the-dark face painting included! This event will feature top DJs from across East Africa playing the latest afrobeats, house, and electronic music.", 
+        time: "7PM till dawn", 
+        tickets: "Early Bird KES 1,000 / Gate KES 1,500", 
+        link: "#",
+        img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        badge: "Almost Sold Out",
+        category: "nairobi"
+      },
+      { 
+        date: "Oct 31, 2025", 
+        title: "Haunted Bass", 
+        location: "Mombasa", 
+        desc: "Halloween + House Music = Haunted Bass. Come in costumes, win prizes! Featuring a costume contest with KES 50,000 in prizes, terrifying decor, and special effects that will make this a night to remember.", 
+        time: "8PM till 5AM", 
+        tickets: "Advance KES 1,200 / Gate KES 1,800", 
+        link: "#",
+        img: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        badge: "New Event",
+        category: "mombasa"
+      },
+      { 
+        date: "Nov 28, 2025", 
+        title: "Glow Carnival", 
+        location: "Kisumu", 
+        desc: "Massive glow sticks, confetti storms, and carnival rides. A party like no other! Featuring actual carnival rides, glow body painting stations, and performances by Kenya's top artists.", 
+        time: "6PM till late", 
+        tickets: "Early Bird KES 900 / Gate KES 1,400", 
+        link: "#",
+        img: "https://images.unsplash.com/photo-14606614102-c6c33f5a7928?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        badge: "Early Bird",
+        category: "kisumu"
+      }
+    ];
+
+    const eventsList = document.getElementById("events-list");
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    // Confetti effect
+    function launchConfetti(container) {
+      for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement("div");
+        confetti.style.position = "absolute";
+        confetti.style.left = Math.random() * 100 + "%";
+        confetti.style.top = "-10px";
+        confetti.style.width = "10px";
+        confetti.style.height = "10px";
+        confetti.style.background = ["#ff00ff","#00ffff","#ffff00","#ff9900"][Math.floor(Math.random()*4)];
+        confetti.style.opacity = "0.9";
+        confetti.style.animation = `fall ${1 + Math.random() * 2}s linear forwards`;
+        confetti.style.borderRadius = "50%";
+        confetti.style.zIndex = "100";
+        container.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 3000);
+      }
+    }
+    
+    // Add confetti animation style
+    const style = document.createElement('style');
+    style.innerHTML = `@keyframes fall { to { transform: translateY(200px) rotate(360deg); opacity: 0; } }`;
+    document.head.appendChild(style);
+
+    // Render Event Cards
+    function renderEvents(filter = 'all') {
+      eventsList.innerHTML = '';
+      
+      const filteredEvents = filter === 'all' 
+        ? events 
+        : events.filter(event => event.category === filter);
+      
+      filteredEvents.forEach(ev => {
+        const card = document.createElement("div");
+        card.classList.add("event-card");
+        card.setAttribute('data-category', ev.category);
+        card.innerHTML = `
+          <div class="event-header">
+            <img src="${ev.img}" alt="${ev.title}">
+            <div class="event-badge">${ev.badge}</div>
+          </div>
+          <div class="event-content">
+            <h2>${ev.title}</h2>
+            <div class="event-meta">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0 18c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8zm1-14v6h5v-2h-3v-4h-2z"/></svg>
+              <span>${ev.date}</span>
+            </div>
+            <div class="event-meta">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+              <span>${ev.location}</span>
+            </div>
+            <div class="event-meta">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0 18c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8zm1-14v6h5v-2h-3v-4h-2z"/></svg>
+              <span>${ev.time}</span>
+            </div>
+          </div>
+          <div class="event-details">
+            <p><strong>Event Details:</strong> ${ev.desc}</p>
+            <p class="social-proof">
+              <div class="proof-item">
+                <svg class="proof-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.406 9.558c-1.21-.051-2.87-.278-3.977-.744.809-3.283 1.253-8.814-2.032-8.814-1.695 0-2.221 1.01-2.221 2.181 0 1.153.646 1.933 1.041 2.943l.498 1.483c.384 1.15.518 2.427.314 3.794-.682-.256-1.876-.6-3.165-.958-1.312-.364-2.392-.58-3.277-.709-1.141-.164-2.188.312-2.188 1.25 0 2.22 4.224 6.423 8.07 6.423 4.163 0 7.679-2.148 9.284-5.127.938-1.758.998-3.55.337-4.916zm-3.014 5.691c-.868.896-2.294 1.636-3.897 2.056-1.762.462-3.741.398-5.194-.132-1.464-.535-2.411-1.426-2.698-2.25.15.043.305.085.465.125 1.191.33 2.74.662 4.146.943 1.724.348 3.146.513 4.302.513 1.103 0 2.014-.187 2.735-.562.246-.397.355-.876.241-1.293-.121-.443-.584-.762-1.1-.4zm-12.327-4.25c-.472-.133-.928-.264-1.365-.392-.614-.181-.822-.398-.822-.619 0-.216.202-.43.799-.611.473-.144 1.13-.289 1.942-.429.813-.141 1.735-.266 2.714-.375.979-.109 2.01-.198 3.048-.266 1.036-.068 2.079-.114 3.098-.136.816-.016 1.62-.008 2.396.027.776.034 1.521.091 2.22.174.699.082 1.351.187 1.945.317.594.129 1.129.283 1.594.465.465.181.856.389 1.165.627.154.119.231.24.231.361 0 .211-.173.4-.667.572-.494.172-1.245.33-2.231.469-.986.141-2.193.261-3.588.361-1.396.102-2.961.181-4.657.241-1.697.059-3.509.1-5.403.125-.947.012-1.859.016-2.729.012h-1.244c-.27 0-.533-.012-.787-.034z"/></svg>
+                <span><strong>${Math.floor(Math.random()*20)+5} tickets left</strong> - Selling fast!</span>
+              </div>
+              <div class="proof-item">
+                <svg class="proof-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09-1.09-1.28-2.76-2.09-4.5-2.09-3.08 0-5.5 2.42-5.5 5.5 0 3.78 3.4 6.86 8.55 11.54l1.45 1.29 1.45-1.29c5.15-4.68 8.55-7.76 8.55-11.54 0-3.08-2.42-5.5-5.5-5.5zm-4.5 15.5l-1.45-1.29c-4.36-3.88-7-6.5-7-9.21 0-2.21 1.79-4 4-4 1.18 0 2.41.57 3.45 1.5l1.55 1.47 1.55-1.47c1.04-.93 2.27-1.5 3.45-1.5 2.21 0 4 1.79 4 4 0 2.71-2.64 5.33-7 9.21l-1.45 1.29z"/></svg>
+                <span>${Math.floor(Math.random()*50)+30} people interested</span>
+              </div>
+              <div class="proof-item">
+                <svg class="proof-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1.25 17c0 .69-.559 1.25-1.25 1.25-.689 0-1.25-.56-1.25-1.25s.561-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25zm1.393-9.998c-.608-.616-1.515-.955-2.551-.955-2.18 0-3.59 1.55-3.59 3.95h2.011c0-1.486.829-2.013 1.538-2.013.634 0 1.307.421 1.364 1.226.062.847-.39 1.277-.962 1.821-.493.484-.608 1.102-.608 1.947h2.005c0-.553.052-1.143.312-1.554.57-.9 1.414-1.279 1.414-1.279.608-.293.782-.768.782-1.404 0-.726-.396-1.346-1.102-1.839z"/></svg>
+                <span><strong>${Math.floor(Math.random()*50)+10}</strong> tickets sold in last 24 hours</span>
+              </div>
+            </p>
+            <div class="cta-buttons">
+              <a href="${ev.link}" class="book-btn">Secure Your Ticket Now</a>
+              <a href="#" class="secondary-btn">Share with Friends</a>
+              <a href="#" class="secondary-btn"><i class="far fa-calendar-plus"></i> Add to Calendar</a>
+            </div>
+            <div class="countdown" id="countdown-${ev.title.replace(/\s/g,'')}"></div>
+          </div>
+        `;
+        eventsList.appendChild(card);
+
+        // Accordion behavior + confetti
+        card.querySelector(".event-header").addEventListener("click", () => {
+          document.querySelectorAll(".event-card").forEach(c => {
+            if (c !== card) c.classList.remove("active");
+          });
+          card.classList.toggle("active");
+          if (card.classList.contains("active")) launchConfetti(card);
+        });
+
+        // Countdown timer for each event
+        const countdownEl = card.querySelector(`#countdown-${ev.title.replace(/\s/g,'')}`);
+        const eventDate = new Date(ev.date).getTime();
+        setInterval(() => {
+          const now = new Date().getTime();
+          const diff = eventDate - now;
+          if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            countdownEl.innerHTML = `
+              <div class="countdown">
+                <div class="countdown-item">
+                  <div class="countdown-number">${days}</div>
+                  <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                  <div class="countdown-number">${hours}</div>
+                  <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                  <div class="countdown-number">${minutes}</div>
+                  <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                  <div class="countdown-number">${seconds}</div>
+                  <div class="countdown-label">Seconds</div>
+                </div>
+              </div>
+            `;
+          } else {
+            countdownEl.innerHTML = "<div class='countdown-number'>HAPPENING NOW!</div>";
+          }
+        }, 1000);
+      });
+    }
+
+    // Initial render
+    renderEvents();
+
+    // Navigation filtering
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        renderEvents(button.dataset.filter);
+      });
+    });
+
+    // Countdown to next event
+    function updateCountdown() {
+      const now = new Date();
+      const nextEventDate = new Date(events[0].date);
+      const diff = nextEventDate - now;
+      
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      } else {
+        document.querySelector('.countdown').innerHTML = '<div class="countdown-number">HAPPENING NOW!</div>';
+      }
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Music preview interaction
+    const musicSamples = document.querySelectorAll('.music-sample');
+    musicSamples.forEach(sample => {
+      sample.addEventListener('click', () => {
+        // In a real implementation, this would play audio
+        alert(`Now playing ${sample.querySelector('p').textContent} sample`);
+      });
+    });
+
+    // FAQ interaction
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
